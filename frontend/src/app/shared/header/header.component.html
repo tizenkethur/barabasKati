@@ -5,22 +5,61 @@
     </div>
     <nav>
       <div id="links">
-        <a>Rólam</a>
-        <a href="">Access Bars</a>
-        <a href="">Események</a>
-        <a href="">Időpontfoglalás</a>
-        <a href="">Árak</a>
-        <a href="">Kapcsolat</a>
+        <button class='menu' mat-button [matMenuTriggerFor]="accessMenu">
+          <span>
+
+            Access Consciousness
+          </span>
+          <span id='trademark'>®</span>
+        </button>
+        <mat-menu #accessMenu="matMenu" class="menu">
+          <button mat-menu-item class="mat-menu-item"> 
+              Access Bars®
+            </button>
+          <button mat-menu-item class='menu-item'>Hogyan segít?</button>
+        </mat-menu>
+        <button class='menu' mat-button [matMenuTriggerFor]="dates">Időpontfoglalás</button>
+        <mat-menu #dates="matMenu" class="menu">
+          <button mat-menu-item class="mat-menu-item"> 
+              Események
+            </button>
+          <button mat-menu-item class='menu-item'>Kezelés</button>
+        </mat-menu>
+        <button class='menu' mat-button [matMenuTriggerFor]="price">Árak</button>
+        <mat-menu #price="matMenu" class="menu">
+          <button mat-menu-item class="mat-menu-item"> 
+              Felnőtt kezelések
+            </button>
+          <button mat-menu-item class='menu-item'>Gyermek kezelések</button>
+        </mat-menu>
       </div>
       <div id="button-holder">
         <button
           class="material-symbols-outlined"
           mat-fab
-          routerLink="/login"
+          routerLink="/"
           color="currentColor"
           aria-label="Button with a login icon"
         >
+          <mat-icon>home</mat-icon>
+        </button>
+        <button
+          class="material-symbols-outlined"
+          mat-fab
+          routerLink="/login"
+          color="currentColor"
+          aria-label="Button with a home icon"
+        >
           <mat-icon>login</mat-icon>
+        </button>
+        <button
+          class="material-symbols-outlined"
+          mat-fab
+          routerLink="/"
+          color="currentColor"
+          aria-label="Button with a import contacts icon"
+        >
+          <mat-icon>import_contacts</mat-icon>
         </button>
       </div>
     </nav>

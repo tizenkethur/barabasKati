@@ -6,4 +6,14 @@
 body {
   margin: 0;
   background-color: rgb(245, 245, 245);
+
+  .mat-menu-panel.menu {
+    background-color: rgb(253, 237, 237);
+    // width: 200px;
+
+    .mat-menu-item {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 18px;
+    }
+  }
 }
