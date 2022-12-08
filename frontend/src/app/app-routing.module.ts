@@ -10,7 +10,16 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () =>
-      import('../app/features/authentication/login/login.module').then((m) => m.LoginModule),
+      import('../app/features/authentication/login/login.module').then(
+        (m) => m.LoginModule
+      ),
+  },
+  {
+    path: 'kapcsolatok',
+    loadChildren: () =>
+      import('../app/features/contacts/contacts.module').then(
+        (m) => m.ContactsModule
+      ),
   },
 ];
 
