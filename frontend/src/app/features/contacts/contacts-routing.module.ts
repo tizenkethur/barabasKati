@@ -1,17 +1,12 @@
-import { SharedModule } from 'src/app/shared/shared.module';
-import { ContactsComponent } from './contacts.component';
-import { NgModule } from '@angular/core';
+import { SharedModule } from './../../shared/shared.module';
 import { RouterModule, Routes } from '@angular/router';
+import { NgModule } from '@angular/core';
+import { ContactsComponent } from './contacts.component';
 
-const routes: Routes = [
-  {
-    path: '',
-    component: ContactsComponent
-  }
-];
+const routes: Routes = [{ path: '', component: ContactsComponent }];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes), SharedModule],
+  imports: [RouterModule.forChild(routes), SharedModule],
   exports: [RouterModule],
 })
 export class ContactsRoutingModule {}

@@ -15,7 +15,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: 'kapcsolatok',
+    path: 'kapcsolat',
     loadChildren: () =>
       import('../app/features/contacts/contacts.module').then(
         (m) => m.ContactsModule
