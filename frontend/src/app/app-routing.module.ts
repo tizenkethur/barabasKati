@@ -21,6 +21,13 @@ const routes: Routes = [
         (m) => m.ContactsModule
       ),
   },
+  {
+    path: 'access-consciousness',
+    loadChildren: () =>
+      import('../app/features/access-consc/access-consc.module').then(
+        (m) => m.AccessConscModule
+      ),
+  },
 ];
 
 @NgModule({

@@ -5,7 +5,12 @@
     </div>
     <nav>
       <div id="links">
-        <button class="menu" mat-button [matMenuTriggerFor]="accessMenu">
+        <button
+          class="menu"
+          mat-button
+          [matMenuTriggerFor]="accessMenu"
+          routerLink="/access-consciousness"
+        >
           <span> Access Consciousness </span>
           <span id="trademark">®</span>
         </button>
@@ -53,7 +58,7 @@
           [matMenuTriggerFor]="contacts"
           routerLink="/kapcsolat"
         >
-          <mat-icon >import_contacts</mat-icon>
+          <mat-icon>import_contacts</mat-icon>
         </button>
         <mat-menu #contacts="matMenu" class="menu">
           <button mat-menu-item class="mat-menu-item" routerLink="/kapcsolatok">
