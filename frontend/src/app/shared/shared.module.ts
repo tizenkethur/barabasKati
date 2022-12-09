@@ -9,6 +9,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatMenuModule } from '@angular/material/menu';
+import { YouTubePlayerModule } from '@angular/youtube-player';
 
 @NgModule({
   declarations: [HeaderComponent],
@@ -21,7 +22,8 @@ import { MatMenuModule } from '@angular/material/menu';
     MatInputModule,
     MatButtonModule,
     ReactiveFormsModule,
-    MatMenuModule    
+    MatMenuModule,
+    YouTubePlayerModule
   ],
   exports: [
     CommonModule,
@@ -33,7 +35,8 @@ import { MatMenuModule } from '@angular/material/menu';
     MatInputModule,
     MatButtonModule,
     ReactiveFormsModule,
-    MatMenuModule
+    MatMenuModule,
+    YouTubePlayerModule
   ],
 })
 export class SharedModule {}
