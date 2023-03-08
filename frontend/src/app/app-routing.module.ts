@@ -28,6 +28,13 @@ const routes: Routes = [
         (m) => m.AccessConscModule
       ),
   },
+  {
+    path: 'datepicker',
+    loadChildren: () =>
+      import('../app/features/datepicker/datepicker.module').then(
+        (m) => m.DatepickerModule
+      ),
+  },
 ];
 
 @NgModule({

@@ -16,22 +16,22 @@
         </button>
         <mat-menu #accessMenu="matMenu" class="menu">
           <button mat-menu-item class="mat-menu-item">Access Bars®</button>
-          <button mat-menu-item class="menu-item">Hogyan segít?</button>
+          <button mat-menu-item class="menu-item">Access Facelift®</button>
         </mat-menu>
         <button class="menu" mat-button [matMenuTriggerFor]="dates">
           Időpontfoglalás
         </button>
         <mat-menu #dates="matMenu" class="menu">
           <button mat-menu-item class="mat-menu-item">Események</button>
-          <button mat-menu-item class="menu-item">Kezelés</button>
+          <button mat-menu-item class="menu-item" routerLink="/datepicker">Kezelés</button>
         </mat-menu>
-        <button class="menu" mat-button [matMenuTriggerFor]="price">
+        <button class="menu" mat-button>
           Árak
         </button>
-        <mat-menu #price="matMenu" class="menu">
+        <!-- <mat-menu #price="matMenu" class="menu">
           <button mat-menu-item class="mat-menu-item">Felnőtt kezelések</button>
           <button mat-menu-item class="menu-item">Gyermek kezelések</button>
-        </mat-menu>
+        </mat-menu> -->
       </div>
       <div id="button-holder">
         <button
@@ -43,7 +43,7 @@
         >
           <mat-icon>home</mat-icon>
         </button>
-        <button
+        <!-- <button
           class="material-symbols-outlined"
           mat-fab
           routerLink="/login"
@@ -51,7 +51,7 @@
           aria-label="Button with a home icon"
         >
           <mat-icon>login</mat-icon>
-        </button>
+        </button> -->
         <button
           class="menu material-symbols-outlined"
           mat-fab

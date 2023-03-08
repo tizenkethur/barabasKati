@@ -19,8 +19,9 @@
     flex-direction: row;
 
     img {
-      margin: 20px;
+      margin: 10px 0 0 20px;
       border-radius: 4px;
+      width: 350px;
     }
   }
 
@@ -75,7 +76,7 @@
         border: 1px solid rgb(152, 133, 24, 0.6);
         background-color: rgb(253, 237, 237);
         border-radius: 10px;
-        width: 400px;
+        width: 380px;
         padding: 20px;
         height: 100%;
         box-shadow: 0 1px 16px 0 rgba(0, 0, 0, 0.2),
