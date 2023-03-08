@@ -4,11 +4,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
-import { AccessConscComponent } from './features/access-consc/access-consc.component';
-import { DatepickerComponent } from './features/datepicker/datepicker.component';
 
 @NgModule({
-  declarations: [AppComponent, DatepickerComponent],
+  declarations: [AppComponent],
   providers: [],
   bootstrap: [AppComponent],
   imports: [

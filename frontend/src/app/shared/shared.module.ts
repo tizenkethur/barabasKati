@@ -10,6 +10,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatMenuModule } from '@angular/material/menu';
 import { YouTubePlayerModule } from '@angular/youtube-player';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [HeaderComponent],
@@ -23,7 +25,9 @@ import { YouTubePlayerModule } from '@angular/youtube-player';
     MatButtonModule,
     ReactiveFormsModule,
     MatMenuModule,
-    YouTubePlayerModule
+    YouTubePlayerModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
   ],
   exports: [
     CommonModule,
@@ -36,7 +40,9 @@ import { YouTubePlayerModule } from '@angular/youtube-player';
     MatButtonModule,
     ReactiveFormsModule,
     MatMenuModule,
-    YouTubePlayerModule
+    YouTubePlayerModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
   ],
 })
 export class SharedModule {}
