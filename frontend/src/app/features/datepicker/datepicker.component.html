@@ -1,13 +1,25 @@
 <div id="main-container">
   <div id='datepicker-holder'>
-    <p>
-      <mat-form-field appearance="fill" color="warn">
-        <mat-label>Válassz egy időpontot!</mat-label>
-        <input matInput [matDatepicker]="dp3" disabled>
-        <!-- <mat-hint>MM/DD/YYYY</mat-hint> -->
-        <mat-datepicker-toggle matIconSuffix [for]="dp3"></mat-datepicker-toggle>
-        <mat-datepicker #dp3 disabled="false"></mat-datepicker>
+    <form [formGroup]="form">
+
+      <mat-label>Személyes adatok</mat-label>
+      <mat-form-field appearance="fill">
+        <input matInput placeholder='Név' formControlName='name'>
       </mat-form-field>
-    </p>
+      <mat-form-field appearance="fill">
+        <input matInput type="email" placeholder='Email' formControlName='email'>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <input matInput placeholder='Telefonszám' formControlName='phoneNumber'>
+      </mat-form-field>
+
+      <mat-label>Válassz egy időpontot!</mat-label>
+      <mat-card class="demo-inline-calendar-card">
+        <mat-calendar [(selected)]="selected"></mat-calendar>
+      </mat-card>
+      <p>A kiválasztott dátum: {{selected | date }}</p>
+
+      <button mat-raised-button (click)="sendForm()">Küldés</button>
+    </form>
   </div>
 </div>
