@@ -4,7 +4,7 @@
   // display: inline-block;
   margin: 30px;
   font-family: "Cormorant Garamond", serif;
-  font-size: 24px;
+  font-size: 22px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,8 +12,9 @@
   padding: 20px;
 
   #content {
-    width: 80%;
+    width: 70%;
     line-height: 1.5;
+    text-align: justify;
 
     #image {
       width: 600px;
@@ -34,16 +35,15 @@
     }
     
     h1 {
-      font-size: 56px;
+      font-size: 48px;
       font-family: "Cormorant Garamond", serif;
       font-weight: bolder;
       font-style: italic;
-      // margin-top: 50px;
     }
     
     h3 {
       font-family: "Great Vibes", cursive;
-      font-size: 48px;
+      font-size: 40px;
     }
 
     #access {
