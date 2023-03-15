@@ -16,12 +16,20 @@ export class DatepickerComponent {
 
   form = new FormGroup({
     name: new FormControl('', Validators.required),
-    email: new FormControl('', Validators.required),
-    phoneNumber: new FormControl('', Validators.required),
+    email: new FormControl('', [
+      Validators.required,
+      Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$'),
+    ]),
+    phoneNumber: new FormControl('', [
+      Validators.required,
+      Validators.pattern('^[0-9]*$'),
+      Validators.minLength(11),
+      Validators.maxLength(11),
+    ]),
   });
 
-  get name(): AbstractControl| null {
-    return this.form.get('name')
+  get name(): AbstractControl | null {
+    return this.form.get('name');
   }
 
   get email(): AbstractControl | null {
@@ -31,8 +39,6 @@ export class DatepickerComponent {
   get phoneNumber(): AbstractControl | null {
     return this.form.get('phoneNumber');
   }
-
-
 
   sendForm(): void {
     if (this.form.valid) {

@@ -13,10 +13,14 @@
       <mat-form-field appearance="fill">
         <input matInput type="email" placeholder='Email' formControlName='email'>
         <mat-error *ngIf="email?.hasError('required')">A mező kitöltése kötelező!</mat-error>
+        <mat-error *ngIf="email?.hasError('pattern')">Kérlek, ezt a formátumot használd: nevem@valami.hu</mat-error>
       </mat-form-field>
       <mat-form-field appearance="fill">
         <input matInput placeholder='Telefonszám' formControlName='phoneNumber'>
         <mat-error *ngIf="phoneNumber?.hasError('required')">A mező kitöltése kötelező!</mat-error>
+        <mat-error
+          *ngIf="phoneNumber?.hasError('pattern') || phoneNumber?.hasError('minlength') || phoneNumber?.hasError('maxlength')">Kérlek,
+          ezt a formátumot használd: 36201234567</mat-error>
       </mat-form-field>
 
       <mat-label>Válassz egy időpontot!</mat-label>
