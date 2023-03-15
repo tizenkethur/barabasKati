@@ -4,16 +4,19 @@
   </div>
   <div id='datepicker-holder'>
     <form [formGroup]="form">
-
       <mat-label>Személyes adatok</mat-label>
+
       <mat-form-field appearance="fill">
         <input matInput placeholder='Név' formControlName='name'>
+        <mat-error *ngIf="name?.hasError('required')">A mező kitöltése kötelező!</mat-error>
       </mat-form-field>
       <mat-form-field appearance="fill">
         <input matInput type="email" placeholder='Email' formControlName='email'>
+        <mat-error *ngIf="email?.hasError('required')">A mező kitöltése kötelező!</mat-error>
       </mat-form-field>
       <mat-form-field appearance="fill">
         <input matInput placeholder='Telefonszám' formControlName='phoneNumber'>
+        <mat-error *ngIf="phoneNumber?.hasError('required')">A mező kitöltése kötelező!</mat-error>
       </mat-form-field>
 
       <mat-label>Válassz egy időpontot!</mat-label>

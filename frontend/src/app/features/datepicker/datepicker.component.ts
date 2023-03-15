@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import {
   AbstractControl,
   FormControl,
@@ -11,7 +11,7 @@ import {
   templateUrl: './datepicker.component.html',
   styleUrls: ['./datepicker.component.scss'],
 })
-export class DatepickerComponent implements OnInit {
+export class DatepickerComponent {
   selected: Date | null;
 
   form = new FormGroup({
@@ -19,9 +19,20 @@ export class DatepickerComponent implements OnInit {
     email: new FormControl('', Validators.required),
     phoneNumber: new FormControl('', Validators.required),
   });
-  constructor() {}
 
-  ngOnInit(): void {}
+  get name(): AbstractControl| null {
+    return this.form.get('name')
+  }
+
+  get email(): AbstractControl | null {
+    return this.form.get('email');
+  }
+
+  get phoneNumber(): AbstractControl | null {
+    return this.form.get('phoneNumber');
+  }
+
+
 
   sendForm(): void {
     if (this.form.valid) {
