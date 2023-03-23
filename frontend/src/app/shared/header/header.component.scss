@@ -9,7 +9,7 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
 header {
   font-family: "Great Vibes", cursive;
-  height: 80px;
+  height: 86px;
   background-color: rgb(253, 237, 237);
   padding: 30px;
   color: rgb(85, 82, 80);
@@ -17,6 +17,7 @@ header {
     0 2px 4px 0 rgba(164, 156, 156, 0.14),
     0 4px 8px -1px rgba(193, 177, 177, 0.12);
   // display: flex;
+  line-height: 0.8;
   width: 100%;
 
   #container {
