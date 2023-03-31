@@ -12,7 +12,8 @@ import {
   styleUrls: ['./datepicker.component.scss'],
 })
 export class DatepickerComponent {
-  selected: Date | null;
+  selectedEvent: Date | null;
+  selectedDate: string;
 
   form = new FormGroup({
     name: new FormControl('', Validators.required),
@@ -44,7 +45,8 @@ export class DatepickerComponent {
     if (this.form.valid) {
       let userData = {
         ...this.form.getRawValue(),
-        selected: this.selected,
+        selectedEvent: this.selectedEvent,
+        selectedDate: this.selectedDate,
       };
       console.log(userData);
     }

@@ -23,7 +23,7 @@
     background-color: whitesmoke;
     border: rgb(193, 177, 114) solid 1px;
     padding: 20px;
-
+    
     mat-label {
       margin: 20px 0;
       font-size: 24px;
@@ -31,24 +31,28 @@
       text-decoration: underline 1px solid;
       text-underline-offset: 2px;
     }
-
+    
     mat-form-field,
     mat-calendar {
       width: 300px;
       margin-bottom: 20px;
       padding: 0;
     }
-
+    
     .demo-inline-calendar-card {
       margin-bottom: 20px;
     }
 
-    button {
-      height: 50px;
+    mat-label {
       font-family: "Cormorant Garamond", serif;
       font-size: 18px;
+    }
+
+    button {
+      height: 50px;
+      font-size: 18px;
       letter-spacing: 1px;
-      // font-weight: bold;
+      font-family: "Cormorant Garamond", serif;
     }
   }
 }

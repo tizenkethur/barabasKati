@@ -7,6 +7,8 @@ $duration: 0.2s;
 $distance: 8px;
 $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
+// TODO: screen-width less than 970: hamburger menu --> lefelé nyíló!
+// Időpontfoglalás külön menüpont, Események külön menüpont --> almenük: kezelés, ingyenes programok, csere, tanfolyam --> mindegyik átirányítódik az Időpontfoglalás route-ra!
 header {
   font-family: "Great Vibes", cursive;
   height: 86px;

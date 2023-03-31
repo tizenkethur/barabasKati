@@ -1,33 +1,66 @@
 <div id="main-container">
-  <div id='image-holder'>
-    <img src="../../../assets/rsz_1rsz_barabaskatalin.jpg" alt="">
+  <div id="image-holder">
+    <img src="../../../assets/rsz_1rsz_barabaskatalin.jpg" alt="" />
   </div>
-  <div id='datepicker-holder'>
+  <div id="datepicker-holder">
     <form [formGroup]="form">
       <mat-label>Személyes adatok</mat-label>
 
       <mat-form-field appearance="fill">
-        <input matInput placeholder='Név' formControlName='name'>
-        <mat-error *ngIf="name?.hasError('required')">A mező kitöltése kötelező!</mat-error>
+        <input matInput placeholder="Név" formControlName="name" />
+        <mat-error *ngIf="name?.hasError('required')"
+          >A mező kitöltése kötelező!</mat-error
+        >
       </mat-form-field>
       <mat-form-field appearance="fill">
-        <input matInput type="email" placeholder='Email' formControlName='email'>
-        <mat-error *ngIf="email?.hasError('required')">A mező kitöltése kötelező!</mat-error>
-        <mat-error *ngIf="email?.hasError('pattern')">Kérlek, ezt a formátumot használd: nevem@valami.hu</mat-error>
+        <input
+          matInput
+          type="email"
+          placeholder="Email"
+          formControlName="email"
+        />
+        <mat-error *ngIf="email?.hasError('required')"
+          >A mező kitöltése kötelező!</mat-error
+        >
+        <mat-error *ngIf="email?.hasError('pattern')"
+          >Kérlek, ezt a formátumot használd: nevem@valami.hu</mat-error
+        >
       </mat-form-field>
       <mat-form-field appearance="fill">
-        <input matInput placeholder='Telefonszám' formControlName='phoneNumber'>
-        <mat-error *ngIf="phoneNumber?.hasError('required')">A mező kitöltése kötelező!</mat-error>
+        <input
+          matInput
+          placeholder="Telefonszám"
+          formControlName="phoneNumber"
+        />
+        <mat-error *ngIf="phoneNumber?.hasError('required')"
+          >A mező kitöltése kötelező!</mat-error
+        >
         <mat-error
-          *ngIf="phoneNumber?.hasError('pattern') || phoneNumber?.hasError('minlength') || phoneNumber?.hasError('maxlength')">Kérlek,
-          ezt a formátumot használd: 36201234567</mat-error>
+          *ngIf="
+            phoneNumber?.hasError('pattern') ||
+            phoneNumber?.hasError('minlength') ||
+            phoneNumber?.hasError('maxlength')
+          "
+          >Kérlek, ezt a formátumot használd: 36201234567</mat-error
+        >
       </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Esemény típusa:</mat-label>
+        <mat-select [(value)]="selectedEvent">
+          <!-- <mat-option value="Esemény típusa:">Esemény típusa:</mat-option> -->
+          <mat-option value="Kezelés">Kezelés</mat-option>
+          <mat-option value="Csere">Csere</mat-option>
+          <mat-option value="Tanfolyam">Tanfolyam</mat-option>
+          <mat-option value="Ingyenes program">Ingyenes program</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <p>A kiválasztott esemény: {{ selectedEvent }}</p>
 
       <mat-label>Válassz egy időpontot!</mat-label>
       <mat-card class="demo-inline-calendar-card">
-        <mat-calendar [(selected)]="selected"></mat-calendar>
+        <mat-calendar [(selected)]="selectedEvent"></mat-calendar>
       </mat-card>
-      <p>A kiválasztott dátum: {{selected | date }}</p>
+      <p>A kiválasztott dátum: {{ selectedDate | date }}</p>
 
       <button mat-raised-button (click)="sendForm()">Küldés</button>
     </form>
