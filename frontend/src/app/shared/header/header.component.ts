@@ -1,10 +1,19 @@
-import { Component, QueryList, ViewChildren} from '@angular/core';
-import { MatMenuTrigger } from '@angular/material/menu';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
+  screenWidth: number;
+
+  ngOnInit(): void {
+    this.screenWidth = window.innerWidth;
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onWindowResize() {
+    this.screenWidth = window.innerWidth;
+  }
 }

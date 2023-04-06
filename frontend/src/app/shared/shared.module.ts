@@ -15,6 +15,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatCardModule } from '@angular/material/card';
 import { FormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 @NgModule({
   declarations: [HeaderComponent],
@@ -34,6 +35,7 @@ import { MatSelectModule } from '@angular/material/select';
     MatCardModule,
     FormsModule,
     MatSelectModule,
+    MatExpansionModule,
   ],
   exports: [
     CommonModule,
@@ -52,6 +54,7 @@ import { MatSelectModule } from '@angular/material/select';
     MatCardModule,
     FormsModule,
     MatSelectModule,
+    MatExpansionModule,
   ],
 })
 export class SharedModule {}
