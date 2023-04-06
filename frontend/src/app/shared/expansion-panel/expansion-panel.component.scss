@@ -21,29 +21,30 @@ mat-expansion-panel-header {
     }
   }
 
-  .button-holder {
-    button {
-      background-color: rgb(245, 245, 245);
-      border: none;
-      text-align: center;
-      box-shadow: #584e4a;
-      box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2),
-        0 2px 6px 0 rgba(0, 0, 0, 0.14), 0 4px 4px -1px rgba(0, 0, 0, 0.12);
-      cursor: pointer;
-      margin-left: 20px;
+  
+  //     .button-holder {
+  //       button {
+  //         background-color: rgb(245, 245, 245);
+  //         border: none;
+  //         text-align: center;
+  //         box-shadow: #584e4a;
+  //         box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2),
+  //           0 2px 6px 0 rgba(0, 0, 0, 0.14), 0 4px 4px -1px rgba(0, 0, 0, 0.12);
+  //         cursor: pointer;
+  //         margin-left: 20px;
 
-      .material-symbols-outlined {
-        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
-      }
+  //         .material-symbols-outlined {
+  //           font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+  //         }
 
-      mat-icon {
-        width: 40px;
-        height: 50px;
-        letter-spacing: 0;
-        line-height: 0.8;
-        font-size: 32px;
-        color: rgb(85, 82, 80);
-      }
-    }
-  }
+  //     mat-icon {
+  //       width: 40px;
+  //       height: 50px;
+  //       letter-spacing: 0;
+  //       line-height: 0.8;
+  //       font-size: 32px;
+  //       color: rgb(85, 82, 80);
+  //     }
+  //   }
+  //     }
 }

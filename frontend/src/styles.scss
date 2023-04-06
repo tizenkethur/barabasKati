@@ -8,11 +8,18 @@ body {
   margin: 0;
   background-color: whitesmoke;
 
+  // TODO: check whether this bunch of code can go to the component.scss files
+  // if no, why??
   .mat-menu-panel.menu {
     background-color: rgb(253, 237, 237);
+    position: relative;
+    top: -20px;
+    left: 48%;
+    width: 200px;
     .mat-menu-item {
       font-family: "Cormorant Garamond", serif;
-      font-size: 18px;
+      font-size: 16px;
+      letter-spacing: 0.5;
     }
   }
 
@@ -22,5 +29,24 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+  }
+
+  .mat-expansion-panel-body,
+  .mat-toolbar {
+    background-color: rgb(253, 237, 237);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 16px;
+    letter-spacing: 0.5;
+
+    .mat-toolbar-row {
+      button {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 18px;
+      }
+
+      .mat-fab {
+        margin: 10px;
+      }
+    }
   }
 }

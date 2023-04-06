@@ -15,35 +15,58 @@
         </button>
       </div>
     </mat-expansion-panel-header>
-    <mat-toolbar color="primary">
+    <mat-toolbar>
       <mat-toolbar-row>
-        <span>My App</span>
-        <span class="example-spacer"></span>
         <button
-          mat-icon-button
-          class="example-icon"
-          aria-label="Example icon-button with menu icon"
+          class="menu"
+          mat-button
+          [matMenuTriggerFor]="accessMenu"
+          routerLink="/access-consciousness"
         >
-          <mat-icon>menu</mat-icon>
+          <span> Access Consciousness </span>
+          <span id="trademark">®</span>
         </button>
+        <mat-menu #accessMenu="matMenu" class="menu">
+          <button mat-menu-item class="mat-menu-item">Access Bars®</button>
+          <button mat-menu-item class="mat-menu-item">Access Facelift®</button>
+        </mat-menu>
       </mat-toolbar-row>
-
       <mat-toolbar-row>
-        <span>Second Line</span>
-        <span class="example-spacer"></span>
+        <button class="menu" mat-button [matMenuTriggerFor]="dates">
+          Időpontfoglalás
+        </button>
+        <mat-menu #dates="matMenu" class="menu">
+          <button mat-menu-item class="mat-menu-item">Események</button>
+          <button mat-menu-item class="menu-item" routerLink="/datepicker">
+            Kezelés
+          </button>
+        </mat-menu>
+      </mat-toolbar-row>
+      <mat-toolbar-row>
+        <button class="menu" mat-button>Árak</button>
+        <!-- <mat-menu #price="matMenu" class="menu">
+            <button mat-menu-item class="mat-menu-item">Felnőtt kezelések</button>
+            <button mat-menu-item class="menu-item">Gyermek kezelések</button>
+          </mat-menu> -->
+      </mat-toolbar-row>
+      <mat-toolbar-row>
         <button
-          mat-icon-button
-          class="example-icon favorite-icon"
-          aria-label="Example icon-button with heart icon"
+          class="material-symbols-outlined"
+          mat-fab
+          color="currentColor"
+          aria-label="Button with a home icon"
+          routerLink="/"
         >
-          <mat-icon>favorite</mat-icon>
+          <mat-icon>home</mat-icon>
         </button>
         <button
-          mat-icon-button
-          class="example-icon"
-          aria-label="Example icon-button with share icon"
+          class="material-symbols-outlined"
+          mat-fab
+          color="currentColor"
+          aria-label="Button with a contacts icon"
+          routerLink="/kapcsolat"
         >
-          <mat-icon>share</mat-icon>
+          <mat-icon>import_contacts</mat-icon>
         </button>
       </mat-toolbar-row>
     </mat-toolbar>
