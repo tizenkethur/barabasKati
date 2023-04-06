@@ -33,12 +33,14 @@
       </mat-toolbar-row>
       <mat-toolbar-row>
         <button class="menu" mat-button [matMenuTriggerFor]="dates">
-          Időpontfoglalás
+          Események
         </button>
         <mat-menu #dates="matMenu" class="menu">
-          <button mat-menu-item class="mat-menu-item">Események</button>
-          <button mat-menu-item class="menu-item" routerLink="/datepicker">
-            Kezelés
+          <button mat-menu-item class="mat-menu-item">Csere</button>
+          <button mat-menu-item class="menu-item">Kezelés</button>
+          <button mat-menu-item class="mat-menu-item">Tanfolyam</button>
+          <button mat-menu-item class="mat-menu-item">
+            Ingyenes programok
           </button>
         </mat-menu>
       </mat-toolbar-row>
@@ -48,6 +50,11 @@
             <button mat-menu-item class="mat-menu-item">Felnőtt kezelések</button>
             <button mat-menu-item class="menu-item">Gyermek kezelések</button>
           </mat-menu> -->
+      </mat-toolbar-row>
+      <mat-toolbar-row>
+        <button class="menu" mat-button routerLink="/datepicker">
+          Időpontfoglalás
+        </button>
       </mat-toolbar-row>
       <mat-toolbar-row>
         <button
