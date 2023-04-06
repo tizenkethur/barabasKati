@@ -1,2 +1,8 @@
-<app-header></app-header>
+<div *ngIf="screenWidth > 990; then bigScreen; else smallScreen"></div>
+<ng-template #bigScreen>
+  <app-header></app-header>
+</ng-template>
+<ng-template #smallScreen>
+  <expansion-panel></expansion-panel>
+</ng-template>
 <router-outlet></router-outlet>

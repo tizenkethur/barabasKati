@@ -16,9 +16,11 @@ import { MatCardModule } from '@angular/material/card';
 import { FormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { ExpansionPanelComponent } from './expansion-panel/expansion-panel.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
-  declarations: [HeaderComponent],
+  declarations: [HeaderComponent, ExpansionPanelComponent],
   imports: [
     CommonModule,
     MatTabsModule,
@@ -36,10 +38,12 @@ import { MatExpansionModule } from '@angular/material/expansion';
     FormsModule,
     MatSelectModule,
     MatExpansionModule,
+    MatToolbarModule,
   ],
   exports: [
     CommonModule,
     HeaderComponent,
+    ExpansionPanelComponent,
     MatTabsModule,
     MatIconModule,
     RouterModule,
@@ -55,6 +59,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
     FormsModule,
     MatSelectModule,
     MatExpansionModule,
+    MatToolbarModule,
   ],
 })
 export class SharedModule {}

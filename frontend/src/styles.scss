@@ -15,4 +15,12 @@ body {
       font-size: 18px;
     }
   }
+
+  .mat-content {
+    overflow: visible;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
 }

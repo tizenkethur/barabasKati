@@ -3,51 +3,48 @@
     <div id="name">
       <p>Barabás Katalin</p>
     </div>
-    <!-- TODO: implement sidenav?? -->
     <nav>
-      <div *ngIf="screenWidth > 990; then bigScreen; else smallScreen"></div>
-      <ng-template #bigScreen>
-        <div id="links">
-          <button
-            class="menu"
-            mat-button
-            [matMenuTriggerFor]="accessMenu"
-            routerLink="/access-consciousness"
-          >
-            <span> Access Consciousness </span>
-            <span id="trademark">®</span>
+      <div id="links">
+        <button
+          class="menu"
+          mat-button
+          [matMenuTriggerFor]="accessMenu"
+          routerLink="/access-consciousness"
+        >
+          <span> Access Consciousness </span>
+          <span id="trademark">®</span>
+        </button>
+        <!-- TODO: set the width of the mat-menu!! -->
+        <mat-menu #accessMenu="matMenu" class="menu">
+          <button mat-menu-item class="mat-menu-item">Access Bars®</button>
+          <button mat-menu-item class="menu-item">Access Facelift®</button>
+        </mat-menu>
+        <button class="menu" mat-button [matMenuTriggerFor]="dates">
+          Időpontfoglalás
+        </button>
+        <mat-menu #dates="matMenu" class="menu">
+          <button mat-menu-item class="mat-menu-item">Események</button>
+          <button mat-menu-item class="menu-item" routerLink="/datepicker">
+            Kezelés
           </button>
-          <!-- TODO: set the with of the mat-menu!! -->
-          <mat-menu #accessMenu="matMenu" class="menu">
-            <button mat-menu-item class="mat-menu-item">Access Bars®</button>
-            <button mat-menu-item class="menu-item">Access Facelift®</button>
-          </mat-menu>
-          <button class="menu" mat-button [matMenuTriggerFor]="dates">
-            Időpontfoglalás
-          </button>
-          <mat-menu #dates="matMenu" class="menu">
-            <button mat-menu-item class="mat-menu-item">Események</button>
-            <button mat-menu-item class="menu-item" routerLink="/datepicker">
-              Kezelés
-            </button>
-          </mat-menu>
-          <button class="menu" mat-button>Árak</button>
-          <!-- <mat-menu #price="matMenu" class="menu">
+        </mat-menu>
+        <button class="menu" mat-button>Árak</button>
+        <!-- <mat-menu #price="matMenu" class="menu">
             <button mat-menu-item class="mat-menu-item">Felnőtt kezelések</button>
             <button mat-menu-item class="menu-item">Gyermek kezelések</button>
           </mat-menu> -->
-        </div>
-        <div id="button-holder">
-          <button
-            class="material-symbols-outlined"
-            mat-fab
-            routerLink="/"
-            color="currentColor"
-            aria-label="Button with a login icon"
-          >
-            <mat-icon>home</mat-icon>
-          </button>
-          <!-- <button
+      </div>
+      <div class="button-holder">
+        <button
+          class="material-symbols-outlined"
+          mat-fab
+          routerLink="/"
+          color="currentColor"
+          aria-label="Button with a login icon"
+        >
+          <mat-icon>home</mat-icon>
+        </button>
+        <!-- <button
             class="material-symbols-outlined"
             mat-fab
             routerLink="/login"
@@ -56,40 +53,23 @@
             >
             <mat-icon>login</mat-icon>
           </button> -->
-          <button
-            class="menu material-symbols-outlined"
-            mat-fab
-            [matMenuTriggerFor]="contacts"
-            routerLink="/kapcsolat"
-          >
-            <mat-icon>import_contacts</mat-icon>
+        <button
+          class="material-symbols-outlined"
+          mat-fab
+          [matMenuTriggerFor]="contacts"
+          routerLink="/kapcsolat"
+        >
+          <mat-icon>import_contacts</mat-icon>
+        </button>
+        <mat-menu #contacts="matMenu" class="menu">
+          <button mat-menu-item class="mat-menu-item" routerLink="/kapcsolatok">
+            Elérhetőségek
           </button>
-          <mat-menu #contacts="matMenu" class="menu">
-            <button
-              mat-menu-item
-              class="mat-menu-item"
-              routerLink="/kapcsolatok"
-            >
-              Elérhetőségek
-            </button>
-            <button mat-menu-item class="menu-item" routerLink="/kapcsolatok">
-              Hasznos linkek
-            </button>
-          </mat-menu>
-        </div>
-      </ng-template>
-      <ng-template #smallScreen>
-        <div id="button-holder">
-          <button
-            class="material-symbols-outlined"
-            mat-fab
-            color="currentColor"
-            aria-label="Button with a menu icon"
-          >
-            <mat-icon>menu</mat-icon>
+          <button mat-menu-item class="menu-item" routerLink="/kapcsolatok">
+            Hasznos linkek
           </button>
-        </div>
-      </ng-template>
+        </mat-menu>
+      </div>
     </nav>
   </div>
 </header>
