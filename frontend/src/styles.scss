@@ -28,7 +28,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+
+    p {
+      margin: 0;
+    }
   }
 
   .mat-expansion-panel-body,
@@ -37,15 +40,17 @@ body {
     font-family: "Cormorant Garamond", serif;
     font-size: 16px;
     letter-spacing: 0.5;
+    padding: 0 0 12px 0;
 
     .mat-toolbar-row {
       button {
         font-family: "Cormorant Garamond", serif;
         font-size: 18px;
+        padding: 0;
       }
 
       .mat-fab {
-        margin: 10px;
+        margin-right: 10px;
       }
     }
   }

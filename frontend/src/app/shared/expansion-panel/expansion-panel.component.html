@@ -2,19 +2,16 @@
 <mat-accordion>
   <mat-expansion-panel hideToggle>
     <mat-expansion-panel-header>
-      <div id="name">
-        <p>Barabás Katalin</p>
-      </div>
-      <div class="button-holder">
-        <button
-          class="material-symbols-outlined"
-          mat-fab
-          color="currentColor"
-          aria-label="Button with a menu icon"
-        >
-          <mat-icon>menu</mat-icon>
-        </button>
-      </div>
+      <p>Barabás Katalin</p>
+
+      <button
+        class="material-symbols-outlined"
+        mat-fab
+        color="currentColor"
+        aria-label="Button with a menu icon"
+      >
+        <mat-icon>menu</mat-icon>
+      </button>
     </mat-expansion-panel-header>
     <mat-toolbar>
       <mat-toolbar-row>
@@ -46,11 +43,13 @@
         </mat-menu>
       </mat-toolbar-row>
       <mat-toolbar-row>
-        <button class="menu" mat-button>Árak</button>
+        <button class="menu" mat-button>
+          Árak
+        </button>
         <!-- <mat-menu #price="matMenu" class="menu">
-            <button mat-menu-item class="mat-menu-item">Felnőtt kezelések</button>
-            <button mat-menu-item class="menu-item">Gyermek kezelések</button>
-          </mat-menu> -->
+          <button mat-menu-item class="mat-menu-item">Felnőtt kezelések</button>
+          <button mat-menu-item class="menu-item">Gyermek kezelések</button>
+        </mat-menu> -->
       </mat-toolbar-row>
       <mat-toolbar-row>
         <button class="menu" mat-button routerLink="/datepicker">
