@@ -1,78 +1,71 @@
-<header>
-  <div id="container">
-    <div id="name">
-      <p>Barabás Katalin</p>
-    </div>
-    <nav>
-      <div id="links">
-        <button
-          class="menu"
-          mat-button
-          [matMenuTriggerFor]="accessMenu"
-          routerLink="/access-consciousness"
-        >
-          <span> Access Consciousness </span>
+<mat-accordion>
+  <mat-expansion-panel hideToggle>
+    <mat-expansion-panel-header>
+      <p id="name">Barabás Katalin</p>
+
+      <button
+        class="material-symbols-outlined"
+        mat-fab
+        color="primary"
+        aria-label="Button with a menu icon"
+      >
+        <mat-icon>menu</mat-icon>
+      </button>
+    </mat-expansion-panel-header>
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <p routerLink="/access-consciousness" class="nested-title">
+          Access Consciousness
           <span id="trademark">®</span>
-        </button>
-        <!-- TODO: set the width of the mat-menu!! -->
-        <mat-menu #accessMenu="matMenu" class="menu">
-          <button mat-menu-item class="mat-menu-item">Access Bars®</button>
-          <button mat-menu-item class="menu-item">Access Facelift®</button>
-        </mat-menu>
-        <button class="menu" mat-button [matMenuTriggerFor]="dates">
-          Események
-        </button>
-        <mat-menu #dates="matMenu" class="menu">
-          <button mat-menu-item class="mat-menu-item">Csere</button>
-          <button mat-menu-item class="menu-item">Kezelés</button>
-          <button mat-menu-item class="mat-menu-item">Tanfolyam</button>
-          <button mat-menu-item class="mat-menu-item">
-            Ingyenes programok
-          </button>
-        </mat-menu>
-        <button class="menu" mat-button>Árak</button>
-        <button class="menu" mat-button>Időpontfoglalás</button>
-        <!-- <mat-menu #price="matMenu" class="menu">
-            <button mat-menu-item class="mat-menu-item">Felnőtt kezelések</button>
-            <button mat-menu-item class="menu-item">Gyermek kezelések</button>
-          </mat-menu> -->
+        </p>
+      </mat-expansion-panel-header>
+      <div>
+        <p routerLink="">Access Bars®</p>
+        <p routerLink="">Access Facelift®</p>
       </div>
-      <div class="button-holder">
+    </mat-expansion-panel>
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <p class="nested-title">Események</p>
+      </mat-expansion-panel-header>
+      <div>
+        <p>Csere</p>
+        <p>Kezelés</p>
+        <p>Tanfolyam</p>
+        <p>Ingyenes programok</p>
+      </div>
+    </mat-expansion-panel>
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <p class="nested-title">Árak</p>
+      </mat-expansion-panel-header>
+      <div>
+        <p>Felnőtt kezelések</p>
+        <p>Gyermek kezelések</p>
+      </div>
+    </mat-expansion-panel>
+    <div id='other-links-holder'>
+      <p routerLink="/datepicker">Időpontfoglalás</p>
+      <div id="button-holder">
         <button
           class="material-symbols-outlined"
           mat-fab
+          color="primary"
+          aria-label="Button with a home icon"
           routerLink="/"
-          color="currentColor"
-          aria-label="Button with a login icon"
         >
           <mat-icon>home</mat-icon>
         </button>
-        <!-- <button
-            class="material-symbols-outlined"
-            mat-fab
-            routerLink="/login"
-            color="currentColor"
-            aria-label="Button with a home icon"
-            >
-            <mat-icon>login</mat-icon>
-          </button> -->
         <button
           class="material-symbols-outlined"
           mat-fab
-          [matMenuTriggerFor]="contacts"
+          color="primary"
+          aria-label="Button with a contacts icon"
           routerLink="/kapcsolat"
         >
           <mat-icon>import_contacts</mat-icon>
         </button>
-        <mat-menu #contacts="matMenu" class="menu">
-          <button mat-menu-item class="mat-menu-item" routerLink="/kapcsolatok">
-            Elérhetőségek
-          </button>
-          <button mat-menu-item class="menu-item" routerLink="/kapcsolatok">
-            Hasznos linkek
-          </button>
-        </mat-menu>
       </div>
-    </nav>
-  </div>
-</header>
+    </div>
+  </mat-expansion-panel>
+</mat-accordion>

@@ -16,11 +16,10 @@ import { MatCardModule } from '@angular/material/card';
 import { FormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 import { MatExpansionModule } from '@angular/material/expansion';
-import { ExpansionPanelComponent } from './expansion-panel/expansion-panel.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
-  declarations: [HeaderComponent, ExpansionPanelComponent],
+  declarations: [HeaderComponent],
   imports: [
     CommonModule,
     MatTabsModule,
@@ -43,7 +42,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
   exports: [
     CommonModule,
     HeaderComponent,
-    ExpansionPanelComponent,
     MatTabsModule,
     MatIconModule,
     RouterModule,
