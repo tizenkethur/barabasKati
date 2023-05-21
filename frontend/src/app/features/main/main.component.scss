@@ -1,9 +1,6 @@
 @import "../../../mixins.scss";
 
 #main-container {
-  // margin: 30px;
-  font-family: "Cormorant Garamond", serif;
-  // font-size: 18px;
   font-size: calc(15px + 0.7vw);
   font-weight: bold;
   margin-top: 20px;
@@ -16,52 +13,47 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: justify;
-    padding: calc(10px + 1.5625vw);
+    text-align: center;
     line-height: 1.5;
-    // max-width: 600px;
+    max-width: calc(630px + 20vw);
+    padding: calc(10px + 1.5625vw);
 
-    @include sm {
-      max-width: 560px;
-    }
+    #introduction-holder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
 
-    @include md {
-      // flex-direction: row;
-    }
-
-    #image {
-      width: calc(230px + 6vw);
-      height: calc(230px + 6vw);
-      background-image: url("../../../assets/rsz_retus.jpg");
-      background-size: cover;
-      background-position: center;
-      border-radius: 50%;
-      margin-bottom: 20px;
-
-      @include custom(440px) {
-        width: 300px;
-        height: 300px;
+      #image {
+        width: calc(230px + 10vw);
+        height: calc(230px + 10vw);
+        background-image: url("../../../assets/rsz_retus.jpg");
+        background-size: cover;
+        background-position: center;
+        border-radius: 50%;
+        margin: 20px 8px 20px 0;
       }
 
       @include md {
-        margin-right: 30px;
-        float: left;
-        shape-outside: circle(50%);
+        flex-direction: row;
       }
     }
 
-    h1,
-    h3 {
-      margin: 20px 30px;
-      // text-align: center;
+    #text-holder {
+      text-align: justify;
+
+      @include md {
+        padding: 0;
+      }
     }
 
     h1 {
-      font-size: calc(40px + 0.7vw);
+      font-size: calc(34px + 0.7vw);
       font-family: "Cormorant Garamond", serif;
-      // font-weight: bolder;
-      // font-style: italic;
-      line-height: 0;
+      line-height: 1;
+
+      @include md {
+        margin: 0;
+      }
     }
 
     h3 {
@@ -69,9 +61,17 @@
       font-size: calc(30px + 0.7vw);
     }
 
+    #name {
+      margin-top: 30px;
+    }
+
     #access {
       color: rgb(193, 177, 114);
       margin-top: 0;
+    }
+
+    p {
+      font-family: "Cormorant Garamond", serif;
     }
   }
 }
