@@ -59,6 +59,15 @@ body {
     }
   }
 
+  .mat-expansion-panel
+    .mat-expansion-panel-header.cdk-program-focused:not([aria-disabled="true"]),
+  .mat-expansion-panel:not(.mat-expanded)
+    .mat-expansion-panel-header:hover:not([aria-disabled="true"]),
+  .mat-expansion-panel:hover,
+  .mat-expansion-header.mat-expanded:focus {
+    background-color: rgb(253, 237, 237);
+  }
+
   .mat-expansion-panel-body {
     background-color: rgb(253, 237, 237);
     font-family: "Cormorant Garamond", serif;
