@@ -1,12 +1,12 @@
 @import "../../../mixins.scss";
 
 #main-container {
-  font-size: calc(15px + 0.7vw);
-  font-weight: bold;
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: calc(15px + 0.7vw);
+  font-weight: bold;
+  margin-top: 20px;
 
   #content {
     display: flex;
