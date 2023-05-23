@@ -1,38 +1,38 @@
 <div id="main-container">
-  <div id="image-holder">
-    <img src="../../../assets/rsz_1rsz_barabaskatalin.jpg" alt="" />
-  </div>
-  <div id="datepicker-holder">
+  <div id="content">
+    <div id="image-holder">
+      <img src="../../../assets/AccessBars_Meme6_Hungarian-1.jpg" alt="" />
+    </div>
     <form [formGroup]="form">
       <mat-label>Személyes adatok</mat-label>
 
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="fill" color="primary">
         <input matInput placeholder="Név" formControlName="name" />
-        <mat-error *ngIf="name?.hasError('required')"
+        <mat-error color="warn" *ngIf="name?.hasError('required')"
           >A mező kitöltése kötelező!</mat-error
         >
       </mat-form-field>
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="fill" color="primary">
         <input
           matInput
           type="email"
           placeholder="Email"
           formControlName="email"
         />
-        <mat-error *ngIf="email?.hasError('required')"
+        <mat-error color="warn" *ngIf="email?.hasError('required')"
           >A mező kitöltése kötelező!</mat-error
         >
-        <mat-error *ngIf="email?.hasError('pattern')"
+        <mat-error color="warn" *ngIf="email?.hasError('pattern')"
           >Kérlek, ezt a formátumot használd: nevem@valami.hu</mat-error
         >
       </mat-form-field>
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="fill" color="primary">
         <input
           matInput
           placeholder="Telefonszám"
           formControlName="phoneNumber"
         />
-        <mat-error *ngIf="phoneNumber?.hasError('required')"
+        <mat-error color="warn" *ngIf="phoneNumber?.hasError('required')"
           >A mező kitöltése kötelező!</mat-error
         >
         <mat-error
@@ -44,8 +44,8 @@
           >Kérlek, ezt a formátumot használd: 36201234567</mat-error
         >
       </mat-form-field>
-      <mat-form-field appearance="fill">
-        <mat-label>Esemény típusa:</mat-label>
+      <mat-form-field appearance="fill" color="primary">
+        <mat-label id="event-label">Esemény típusa:</mat-label>
         <mat-select [(value)]="selectedEvent">
           <!-- <mat-option value="Esemény típusa:">Esemény típusa:</mat-option> -->
           <mat-option value="Kezelés">Kezelés</mat-option>
@@ -57,10 +57,18 @@
       <p>A kiválasztott esemény: {{ selectedEvent }}</p>
 
       <mat-label>Válassz egy időpontot!</mat-label>
-      <mat-card class="demo-inline-calendar-card">
-        <mat-calendar [(selected)]="selectedEvent"></mat-calendar>
+      <!-- TODO: mat-error if event and date arent choosen -->
+      <mat-card class="demo-inline-calendar-card" color="primary">
+        <!-- // TODO: set to hungarian -->
+        <mat-calendar [(selected)]="selectedDate"></mat-calendar>
       </mat-card>
       <p>A kiválasztott dátum: {{ selectedDate | date }}</p>
+      <mat-error *ngIf="!selectedDate"
+        >Kérlek, válassz ki egy időpontot!</mat-error
+      >
+      <mat-error *ngIf="!selectedEvent"
+        >Kérlek, válaszd ki az esemény típusát!</mat-error
+      >
 
       <button mat-raised-button (click)="sendForm()">Küldés</button>
     </form>

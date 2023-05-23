@@ -1,51 +1,52 @@
-#main-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 20px;
-  font-family: "Cormorant Garamond", serif;
+@import "../../../mixins.scss";
 
+#content {
   #image-holder {
-    margin-bottom: 20px;
-
     img {
       border-radius: 3px;
+      width: 280px;
+
+      @include custom(450px) {
+        width: 430px;
+      }
     }
   }
 
   form {
     display: flex;
-    width: 500px;
     flex-direction: column;
     align-items: center;
     border-radius: 3px;
-    background-color: whitesmoke;
     border: rgb(193, 177, 114) solid 1px;
-    padding: 20px;
-    
+    padding: 10px;
+    margin-top: 20px;
+    width: 280px;
+    font-family: "Cormorant Garamond", serif;
+
     mat-label {
       margin: 20px 0;
       font-size: 24px;
-      // font-family: "Cormorant Garamond", serif;
-      text-decoration: underline 1px solid;
       text-underline-offset: 2px;
     }
-    
+
     mat-form-field,
     mat-calendar {
+      font-family: "Cormorant Garamond", serif;
       width: 300px;
       margin-bottom: 20px;
       padding: 0;
     }
-    
+
     .demo-inline-calendar-card {
       margin-bottom: 20px;
     }
 
-    mat-label {
-      font-family: "Cormorant Garamond", serif;
+    #event-label {
       font-size: 18px;
+    }
+
+    mat-error {
+      color: red;
     }
 
     button {
@@ -53,6 +54,9 @@
       font-size: 18px;
       letter-spacing: 1px;
       font-family: "Cormorant Garamond", serif;
+    }
+    @include custom(450px) {
+      width: 430px;
     }
   }
 }

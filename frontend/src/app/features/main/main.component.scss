@@ -1,77 +1,53 @@
 @import "../../../mixins.scss";
 
-#main-container {
+#introduction-holder {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: calc(15px + 0.7vw);
-  font-weight: bold;
-  margin-top: 20px;
 
-  #content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    line-height: 1.5;
-    max-width: calc(630px + 20vw);
-    padding: calc(10px + 1.5625vw);
-
-    #introduction-holder {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-      #image {
-        width: calc(230px + 10vw);
-        height: calc(230px + 10vw);
-        background-image: url("../../../assets/rsz_retus.jpg");
-        background-size: cover;
-        background-position: center;
-        border-radius: 50%;
-        margin: 20px 8px 20px 0;
-      }
-
-      @include md {
-        flex-direction: row;
-      }
-    }
-
-    #text-holder {
-      text-align: justify;
-
-      @include md {
-        padding: 0;
-      }
-    }
-
-    h1 {
-      font-size: calc(34px + 0.7vw);
-      font-family: "Cormorant Garamond", serif;
-      line-height: 1;
-
-      @include md {
-        margin: 0;
-      }
-    }
-
-    h3 {
-      font-family: "Great Vibes", cursive;
-      font-size: calc(30px + 0.7vw);
-    }
-
-    #name {
-      margin-top: 30px;
-    }
-
-    #access {
-      color: rgb(193, 177, 114);
-      margin-top: 0;
-    }
-
-    p {
-      font-family: "Cormorant Garamond", serif;
-    }
+  #image {
+    width: calc(230px + 10vw);
+    height: calc(230px + 10vw);
+    background-image: url("../../../assets/rsz_retus.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin: 20px 8px 20px 0;
   }
+}
+
+#text-holder {
+  text-align: justify;
+
+  @include md {
+    padding: 0;
+  }
+}
+
+h1 {
+  font-size: calc(34px + 0.7vw);
+  font-family: "Cormorant Garamond", serif;
+  line-height: 1;
+
+  @include md {
+    margin: 0;
+  }
+}
+
+h3 {
+  font-family: "Great Vibes", cursive;
+  font-size: calc(30px + 0.7vw);
+}
+
+#name {
+  margin-top: 30px;
+}
+
+#access {
+  color: rgb(193, 177, 114);
+  margin-top: 0;
+}
+
+p {
+  font-family: "Cormorant Garamond", serif;
 }

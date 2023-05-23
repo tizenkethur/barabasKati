@@ -13,6 +13,7 @@ mat-accordion {
     padding: 0 10px 0 20px;
     display: flex;
     align-items: center;
+    margin: 0px;
 
     .nested-title {
       font-family: "Cormorant Garamond", serif;
@@ -36,15 +37,11 @@ mat-accordion {
     cursor: pointer;
   }
 
-  #other-links-holder {
-    margin-top: 30px;
-  }
-
   #button-holder {
     margin-left: 20px;
 
     .nested-button {
-      margin-top: 10px;
+      margin-top: 20px;
       margin-right: 10px;
     }
   }
