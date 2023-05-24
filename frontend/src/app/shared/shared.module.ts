@@ -17,6 +17,7 @@ import { FormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [HeaderComponent],
@@ -38,6 +39,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatSelectModule,
     MatExpansionModule,
     MatToolbarModule,
+    MatTableModule,
   ],
   exports: [
     CommonModule,
@@ -58,6 +60,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatSelectModule,
     MatExpansionModule,
     MatToolbarModule,
+    MatTableModule,
   ],
 })
 export class SharedModule {}

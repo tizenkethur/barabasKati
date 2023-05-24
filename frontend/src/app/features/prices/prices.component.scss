@@ -1,0 +1,31 @@
+img {
+  width: 430px;
+}
+
+#table-holder {
+  table {
+    width: 430px;
+    font-family: "Cormorant Garamond", cursive;
+    font-weight: bold;
+
+    .mat-column-description,
+    .mat-column-timeInterval,
+    .mat-column-price {
+      color: rgb(121, 85, 72);
+      font-weight: bold;
+    }
+
+    .mat-header-cell {
+      background-color: rgb(144, 221, 211);
+      letter-spacing: 1px;
+      text-align: center;
+      font-size: 24px;
+    }
+
+    .mat-cell {
+      width: 300px;
+      text-align: center;
+      font-size: 20px;
+    }
+  }
+}
