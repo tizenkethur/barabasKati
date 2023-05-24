@@ -24,9 +24,10 @@ export class DatepickerComponent {
     phoneNumber: new FormControl('', [
       Validators.required,
       Validators.pattern('^[0-9]*$'),
-      Validators.minLength(11),
+      Validators.minLength(9),
       Validators.maxLength(11),
     ]),
+    dateOfEvent: new FormControl('', Validators.required),
   });
 
   get name(): AbstractControl | null {
@@ -41,6 +42,9 @@ export class DatepickerComponent {
     return this.form.get('phoneNumber');
   }
 
+  get dateOfEvent(): AbstractControl | null {
+    return this.form.get('dateOfEvent');
+  }
   sendForm(): void {
     if (this.form.valid) {
       let userData = {

@@ -54,23 +54,28 @@
           <mat-option value="Ingyenes program">Ingyenes program</mat-option>
         </mat-select>
       </mat-form-field>
+
       <p>A kiválasztott esemény: {{ selectedEvent }}</p>
-
       <mat-label>Válassz egy időpontot!</mat-label>
-      <!-- TODO: mat-error if event and date arent choosen -->
-      <mat-card class="demo-inline-calendar-card" color="primary">
-        <!-- // TODO: set to hungarian -->
-        <mat-calendar [(selected)]="selectedDate"></mat-calendar>
-      </mat-card>
-      <p>A kiválasztott dátum: {{ selectedDate | date }}</p>
-      <mat-error *ngIf="!selectedDate"
-        >Kérlek, válassz ki egy időpontot!</mat-error
-      >
-      <mat-error *ngIf="!selectedEvent"
+      <mat-form-field>
+        <!-- TODO: mat-error if event and date arent choosen, CUSTOM VALIDATOR -->
+        <mat-card class="demo-inline-calendar-card" color="primary">
+          <!-- // TODO: set to hungarian -->
+          <mat-calendar #date [(selected)]="selectedDate"></mat-calendar>
+        </mat-card>
+        <input matInput formControlName="dateOfEvent" />
+        {{ selectedDate | date }}
+        <mat-error *ngIf="dateOfEvent.hasError('required')"
+          >Kérlek, válassz ki egy időpontot!</mat-error
+        >
+      </mat-form-field>
+      <!-- <mat-error *ngIf="!selectedEvent"
         >Kérlek, válaszd ki az esemény típusát!</mat-error
-      >
+      > -->
 
-      <button mat-raised-button (click)="sendForm()">Küldés</button>
+      <button [disabled]="form.invalid" mat-raised-button (click)="sendForm()">
+        Küldés
+      </button>
     </form>
   </div>
 </div>

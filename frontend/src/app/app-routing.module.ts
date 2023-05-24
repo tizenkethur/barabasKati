@@ -28,6 +28,13 @@ const routes: Routes = [
         (m) => m.DatepickerModule
       ),
   },
+  {
+    path: 'prices',
+    loadChildren: () =>
+      import('../app/features/prices/prices.module').then(
+        (m) => m.PricesModule
+      ),
+  },
 ];
 
 @NgModule({
