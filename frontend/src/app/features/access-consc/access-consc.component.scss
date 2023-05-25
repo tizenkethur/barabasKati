@@ -1,17 +1,18 @@
 #access-consciousness,
 #access-bars {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: justify;
 }
 
 #access-consciousness {
-  img {
-    // margin: 10px 0 0 20px;
-    border-radius: 4px;
-    width: 350px;
+  #img-holder {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    img {
+      border-radius: 4px;
+      width: 350px;
+    }
   }
 }
 
@@ -38,7 +39,7 @@ ul {
   max-width: 576px;
 }
 
-#bars-container {
+#bars-text-container {
   display: flex;
   // justify-content: space-between;
   flex-direction: column;
@@ -67,6 +68,10 @@ ul {
       height: 100%;
       box-shadow: 0 1px 16px 0 rgba(0, 0, 0, 0.2),
         0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 4px 8px -1px rgba(0, 0, 0, 0.12);
+
+      li {
+        font-size: 18px;
+      }
     }
 
     #middle {

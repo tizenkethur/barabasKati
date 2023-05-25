@@ -1,10 +1,10 @@
 @import "../../../mixins.scss";
 
-#content {
+.content {
   #image-holder {
     img {
       border-radius: 3px;
-      width: 280px;
+      width: 350px;
 
       @include custom(450px) {
         width: 430px;
@@ -18,9 +18,8 @@
     align-items: center;
     border-radius: 3px;
     border: rgb(193, 177, 114) solid 1px;
-    padding: 10px;
+    padding: 40px;
     margin-top: 20px;
-    width: 280px;
     font-family: "Cormorant Garamond", serif;
 
     mat-label {
