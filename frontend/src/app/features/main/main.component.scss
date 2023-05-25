@@ -28,6 +28,7 @@ h1 {
   font-size: calc(34px + 0.7vw);
   font-family: "Cormorant Garamond", serif;
   line-height: 1;
+  font-weight: bold;
 
   @include md {
     margin: 0;

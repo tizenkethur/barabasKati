@@ -8,11 +8,11 @@ import { PriceViewModel } from 'src/app/shared/models/PriceViewModel';
 })
 export class PricesComponent {
   prices: PriceViewModel[] = [
-    { description: 'Access Bars', timeInterval: '60 perc', price: '12000 Ft' },
+    { description: 'Access Bars®', timeInterval: '60 perc', price: '12 000 Ft' },
     {
-      description: 'Access Facelift',
+      description: 'Access Facelift®',
       timeInterval: '60 perc',
-      price: '12000 Ft',
+      price: '12 000 Ft',
     },
     {
       description: 'Gyerek kezelés',
@@ -22,7 +22,7 @@ export class PricesComponent {
     {
       description: 'Felnőtt bérlet',
       timeInterval: '10 alkalom',
-      price: '90000 Ft',
+      price: '90 000 Ft',
     },
   ];
   displayedColumns: string[] = ['description', 'timeInterval', 'price'];

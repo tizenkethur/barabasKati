@@ -14,6 +14,7 @@ mat-accordion {
     display: flex;
     align-items: center;
     margin: 0px;
+    cursor: pointer;
 
     .nested-title {
       font-family: "Cormorant Garamond", serif;
@@ -34,7 +35,6 @@ mat-accordion {
     margin: 10px 20px;
     color: rgb(121, 85, 72);
     font-weight: bold;
-    cursor: pointer;
   }
 
   #button-holder {
