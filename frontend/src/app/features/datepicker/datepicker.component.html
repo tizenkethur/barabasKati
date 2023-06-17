@@ -47,7 +47,6 @@
       <mat-form-field appearance="fill" color="primary">
         <mat-label id="event-label">Esemény típusa:</mat-label>
         <mat-select [(value)]="selectedEvent">
-          <!-- <mat-option value="Esemény típusa:">Esemény típusa:</mat-option> -->
           <mat-option value="Kezelés">Kezelés</mat-option>
           <mat-option value="Csere">Csere</mat-option>
           <mat-option value="Tanfolyam">Tanfolyam</mat-option>
@@ -57,24 +56,18 @@
 
       <p>A kiválasztott esemény: {{ selectedEvent }}</p>
       <mat-label>Válassz egy időpontot!</mat-label>
-      <mat-form-field>
-        <!-- TODO: mat-error if event and date arent choosen, CUSTOM VALIDATOR -->
-        <mat-card class="demo-inline-calendar-card" color="primary">
-          <!-- // TODO: set to hungarian -->
-          <mat-calendar #date [(selected)]="selectedDate"></mat-calendar>
-        </mat-card>
-        <input matInput formControlName="dateOfEvent" />
-        {{ selectedDate | date }}
-        <mat-error *ngIf="dateOfEvent.hasError('required')"
-          >Kérlek, válassz ki egy időpontot!</mat-error
-        >
-      </mat-form-field>
-      <!-- <mat-error *ngIf="!selectedEvent"
-        >Kérlek, válaszd ki az esemény típusát!</mat-error
-      > -->
 
-      <button [disabled]="form.invalid" mat-raised-button (click)="sendForm()">
-        Küldés
+      <mat-card class="demo-inline-calendar-card" color="primary">
+        <mat-calendar [(selected)]="selectedDate"></mat-calendar>
+      </mat-card>
+      <p>A kiválasztott dátum: {{ selectedDate | date }}</p>
+
+      <button
+        [disabled]="form.invalid || !selectedDate || !selectedEvent"
+        mat-raised-button
+        (click)="sendForm()"
+      >
+        Jelentkezem!
       </button>
     </form>
   </div>

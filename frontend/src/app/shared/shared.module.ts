@@ -18,6 +18,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTableModule } from '@angular/material/table';
+import { MAT_DATE_LOCALE } from '@angular/material/core';
 
 @NgModule({
   declarations: [HeaderComponent],
@@ -62,5 +63,6 @@ import { MatTableModule } from '@angular/material/table';
     MatToolbarModule,
     MatTableModule,
   ],
+  providers: [{ provide: MAT_DATE_LOCALE, useValue: 'hu-HU' }],
 })
 export class SharedModule {}

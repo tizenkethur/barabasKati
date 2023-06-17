@@ -27,7 +27,6 @@ export class DatepickerComponent {
       Validators.minLength(9),
       Validators.maxLength(11),
     ]),
-    dateOfEvent: new FormControl('', Validators.required),
   });
 
   get name(): AbstractControl | null {

@@ -29,11 +29,10 @@
     }
 
     mat-form-field,
-    mat-calendar,
-    mat-card {
+    mat-calendar {
       font-family: "Cormorant Garamond", serif;
       width: 260px;
-      margin-bottom: 20px;
+      margin-top: 20px;
       padding: 0;
 
       @include custom(450px) {
@@ -58,6 +57,7 @@
       font-size: 18px;
       letter-spacing: 1px;
       font-family: "Cormorant Garamond", serif;
+      margin-top: 20px;
     }
 
     @include custom(450px) {
