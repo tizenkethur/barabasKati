@@ -22,7 +22,8 @@
         <mat-error color="warn" *ngIf="email?.hasError('required')"
           >A mező kitöltése kötelező!</mat-error
         >
-        <mat-error color="warn" *ngIf="email?.hasError('pattern')"
+
+        <mat-error color="warn" *ngIf="email?.hasError('email')"
           >Kérlek, ezt a formátumot használd: nevem@valami.hu</mat-error
         >
       </mat-form-field>
@@ -62,6 +63,7 @@
       </mat-card>
       <p>A kiválasztott dátum: {{ selectedDate | date }}</p>
 
+      <!-- TODO: send the form to the email -->
       <button
         [disabled]="form.invalid || !selectedDate || !selectedEvent"
         mat-raised-button
