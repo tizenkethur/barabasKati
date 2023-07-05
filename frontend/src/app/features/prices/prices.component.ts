@@ -22,7 +22,7 @@ export class PricesComponent {
     {
       description: 'Felnőtt bérlet',
       timeInterval: '10 alkalom',
-      price: '90 000 Ft',
+      price: '100 000 Ft',
     },
   ];
   displayedColumns: string[] = ['description', 'timeInterval', 'price'];
