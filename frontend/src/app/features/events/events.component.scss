@@ -1,0 +1,41 @@
+@import "../../../mixins.scss";
+
+.main-container {
+  .content {
+    #image {
+      width: calc(250px + 30vw);
+      height: calc(250px + 30vw);
+      background-image: url("../../../assets/rsz_1rsz_barabaskatalin.jpg");
+      background-size: cover;
+      background-position: center;
+      border-radius: 50%;
+      margin: 20px 8px 20px 0;
+
+      @include sm {
+        width: 550px;
+        height: 320px;
+        border-radius: 0;
+      }
+
+      @include md {
+        width: 760px;
+        height: 500px;
+        border-radius: 0;
+      }
+    }
+  }
+
+  #events {
+    width: calc(250px + 30vw);
+
+    @include sm {
+      width: 550px;
+    }
+
+    @include md {
+      width: 760px;
+    }
+  }
+
+  margin: 0;
+}
