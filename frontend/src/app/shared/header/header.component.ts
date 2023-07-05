@@ -7,6 +7,8 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
+  panelOpenState: boolean = false;
+
   constructor(private activatedRoute: ActivatedRoute) {}
 
   ngOnInit(): void {
@@ -17,5 +19,9 @@ export class HeaderComponent {
 
   scrollTo(section: string) {
     document.getElementById(section)?.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  closePanel() {
+    this.panelOpenState = false;
   }
 }

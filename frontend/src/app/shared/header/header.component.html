@@ -1,5 +1,5 @@
 <mat-accordion>
-  <mat-expansion-panel hideToggle>
+  <mat-expansion-panel hideToggle [(expanded)]="panelOpenState">
     <mat-expansion-panel-header>
       <p id="name">Barabás Katalin</p>
 
@@ -14,9 +14,7 @@
     </mat-expansion-panel-header>
     <mat-expansion-panel hideToggle>
       <mat-expansion-panel-header routerLink="/access-consciousness">
-        <p class="nested-title">
-          Access Consciousness®
-        </p>
+        <p class="nested-title">Access Consciousness®</p>
       </mat-expansion-panel-header>
       <div>
         <p routerLink="/access-consciousness" fragment="access-bars">
@@ -31,7 +29,7 @@
       <mat-expansion-panel-header>
         <p class="nested-title">Események</p>
       </mat-expansion-panel-header>
-      <div>
+      <div (click)="closePanel()">
         <p>Csere</p>
         <p>Kezelés</p>
         <p>Tanfolyam</p>
@@ -39,12 +37,15 @@
       </div>
     </mat-expansion-panel>
     <mat-expansion-panel hideToggle disabled routerLink="/prices">
-      <mat-expansion-panel-header>
+      <mat-expansion-panel-header (click)="closePanel()">
         <p class="nested-title">Árak</p>
       </mat-expansion-panel-header>
     </mat-expansion-panel>
     <mat-expansion-panel disabled>
-      <mat-expansion-panel-header routerLink="/datepicker">
+      <mat-expansion-panel-header
+        routerLink="/datepicker"
+        (click)="closePanel()"
+      >
         <p class="nested-title">Időpontfoglalás</p>
       </mat-expansion-panel-header>
     </mat-expansion-panel>
@@ -55,7 +56,7 @@
         mat-fab
         color="primary"
         aria-label="Button with a home icon"
-        routerLink="/"
+        routerLink="/" (click)="closePanel()"
       >
         <mat-icon>home</mat-icon>
       </button>
@@ -64,7 +65,7 @@
         mat-fab
         color="primary"
         aria-label="Button with a contacts icon"
-        routerLink="/kapcsolat"
+        routerLink="/kapcsolat" (click)="closePanel()"
       >
         <mat-icon>import_contacts</mat-icon>
       </button>
