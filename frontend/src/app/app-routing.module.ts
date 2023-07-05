@@ -22,17 +22,24 @@ const routes: Routes = [
       ),
   },
   {
-    path: 'datepicker',
+    path: 'idopontfoglalas',
     loadChildren: () =>
       import('../app/features/datepicker/datepicker.module').then(
         (m) => m.DatepickerModule
       ),
   },
   {
-    path: 'prices',
+    path: 'arak',
     loadChildren: () =>
       import('../app/features/prices/prices.module').then(
         (m) => m.PricesModule
+      ),
+  },
+  {
+    path: 'esemenyek',
+    loadChildren: () =>
+      import('../app/features/events/events.module').then(
+        (m) => m.EventsModule
       ),
   },
 ];
