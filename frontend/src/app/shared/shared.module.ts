@@ -19,9 +19,10 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTableModule } from '@angular/material/table';
 import { MAT_DATE_LOCALE } from '@angular/material/core';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
-  declarations: [HeaderComponent],
+  declarations: [HeaderComponent, FooterComponent],
   imports: [
     CommonModule,
     MatTabsModule,
@@ -45,6 +46,7 @@ import { MAT_DATE_LOCALE } from '@angular/material/core';
   exports: [
     CommonModule,
     HeaderComponent,
+    FooterComponent,
     MatTabsModule,
     MatIconModule,
     RouterModule,
