@@ -18,7 +18,7 @@ export class EventsComponent implements OnInit {
         'https://data.accentapi.com/feed/162589.json?no_cache=20230706161348'
       )
       .subscribe((data) => {
-        console.log(data.total);
+        console.log(data);
         this.totalAngularPackages = data.total;
       });
   }
