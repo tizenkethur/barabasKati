@@ -1,4 +1,3 @@
-import { SharedModule } from './../../shared/shared.module';
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { ContactsComponent } from './contacts.component';

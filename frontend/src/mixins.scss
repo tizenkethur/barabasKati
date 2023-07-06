@@ -3,13 +3,6 @@ $screen-md-min: 768px;
 $screen-lg-min: 992px;
 $screen-xl-min: 1200px;
 
-// Smallest devices {
-  @mixin xs {
-  @media (min-width: #{$screen-sm-min}) {
-    @content;
-  }
-}
-
 // Small devices
 @mixin sm {
   @media (min-width: #{$screen-sm-min}) {
@@ -32,9 +25,9 @@ $screen-xl-min: 1200px;
 }
 
 @mixin custom($screen) {
-   @media (min-width: $screen) {
-       @content;
-   }
+  @media (min-width: $screen) {
+    @content;
+  }
 }
 
 // Extra large devices
