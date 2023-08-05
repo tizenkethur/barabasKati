@@ -2,7 +2,10 @@
   <div class="content">
     <div id="image"></div>
     <div id="events">
-      <div>{{ totalAngularPackages }}</div>
+      <ejs-schedule
+        [eventSettings]="eventData"
+        [currentView]="newViewMode"
+      ></ejs-schedule>
     </div>
   </div>
 </div>

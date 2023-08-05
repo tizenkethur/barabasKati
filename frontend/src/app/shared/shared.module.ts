@@ -20,7 +20,14 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTableModule } from '@angular/material/table';
 import { MAT_DATE_LOCALE } from '@angular/material/core';
 import { FooterComponent } from './footer/footer.component';
-
+import {
+  ScheduleModule,
+  AgendaService,
+  DayService,
+  WeekService,
+  WorkWeekService,
+  MonthService,
+} from '@syncfusion/ej2-angular-schedule';
 @NgModule({
   declarations: [HeaderComponent, FooterComponent],
   imports: [
@@ -42,6 +49,7 @@ import { FooterComponent } from './footer/footer.component';
     MatExpansionModule,
     MatToolbarModule,
     MatTableModule,
+    ScheduleModule,
   ],
   exports: [
     CommonModule,
@@ -64,7 +72,15 @@ import { FooterComponent } from './footer/footer.component';
     MatExpansionModule,
     MatToolbarModule,
     MatTableModule,
+    ScheduleModule,
   ],
-  providers: [{ provide: MAT_DATE_LOCALE, useValue: 'hu-HU' }],
+  providers: [
+    { provide: MAT_DATE_LOCALE, useValue: 'hu-HU' },
+    AgendaService,
+    DayService,
+    WeekService,
+    WorkWeekService,
+    MonthService,
+  ],
 })
 export class SharedModule {}
