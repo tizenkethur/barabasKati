@@ -3,7 +3,7 @@
     <div id="image-holder">
       <img src="../../../assets/AccessBars_Meme6_Hungarian-1.jpg" alt="" />
     </div>
-    <form [formGroup]="form">
+    <form [formGroup]="form" action="javascpript:void(0)" (submit)="sendForm()">
       <mat-label>Személyes adatok</mat-label>
 
       <mat-form-field appearance="fill" color="primary">
@@ -65,9 +65,9 @@
 
       <!-- TODO: send the form to the email -->
       <button
+        type="submit"
         [disabled]="form.invalid || !selectedDate || !selectedEvent"
         mat-raised-button
-        (click)="sendForm()"
       >
         Jelentkezem!
       </button>

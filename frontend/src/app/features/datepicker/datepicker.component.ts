@@ -5,6 +5,7 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
+import { EmailService } from 'src/app/core/services/email/email.service';
 
 @Component({
   selector: 'app-datepicker',
@@ -12,8 +13,8 @@ import {
   styleUrls: ['./datepicker.component.scss'],
 })
 export class DatepickerComponent {
-  selectedEvent: Date | null;
-  selectedDate: string;
+  selectedEvent: string;
+  selectedDate: Date;
 
   form = new FormGroup({
     name: new FormControl('', Validators.required),
@@ -25,6 +26,8 @@ export class DatepickerComponent {
       Validators.maxLength(11),
     ]),
   });
+
+  constructor(private emailService: EmailService) {}
 
   get name(): AbstractControl | null {
     return this.form.get('name');
@@ -41,14 +44,15 @@ export class DatepickerComponent {
   get dateOfEvent(): AbstractControl | null {
     return this.form.get('dateOfEvent');
   }
-  sendForm(): void {
+
+  sendForm() {
     if (this.form.valid) {
       let userData = {
         ...this.form.getRawValue(),
-        selectedEvent: this.selectedEvent,
         selectedDate: this.selectedDate,
+        selectedEvent: this.selectedEvent,
       };
-      console.log(userData);
+      this.emailService.sendForm(userData);
     }
   }
 }
