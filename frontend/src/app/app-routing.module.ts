@@ -42,6 +42,13 @@ const routes: Routes = [
         (m) => m.EventsModule
       ),
   },
+  {
+    path: 'adatvedelmi-nyilatkozat',
+    loadChildren: () =>
+      import('../app/features/data-managment/data-managment.module').then(
+        (m) => m.DataManagmentModule
+      ),
+  },
 ];
 
 @NgModule({
