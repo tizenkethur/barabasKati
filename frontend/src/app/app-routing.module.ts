@@ -49,6 +49,13 @@ const routes: Routes = [
         (m) => m.DataManagmentModule
       ),
   },
+  {
+    path: 'impresszum',
+    loadChildren: () =>
+      import('../app/features/imprint/imprint.module').then(
+        (m) => m.ImprintModule
+      ),
+  },
 ];
 
 @NgModule({
