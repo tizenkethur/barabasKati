@@ -1,13 +1,12 @@
 import { Injectable } from '@angular/core';
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
-import { UserData } from 'src/app/shared/models/userData';
+import { UserData } from 'src/app/shared/models/UserData';
 
 @Injectable({
   providedIn: 'root',
 })
 export class EmailService {
   sendForm(userData: UserData) {
-    // emailjs.init('QK-7djy4z04ErHMCF');
     emailjs
       .send(
         'service_hvvr4ee',

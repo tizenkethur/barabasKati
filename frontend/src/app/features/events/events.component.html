@@ -5,6 +5,11 @@
       <ejs-schedule
         [eventSettings]="eventData"
         [currentView]="newViewMode"
+        [dateFormat]="dateFormat"
+        [firstDayOfWeek]="weekFirstDay"
+        (popupOpen)="onPopupOpen($event)"
+        (cellDoubleClick)="onCellDoubleClick($event)"
+        locale="hu"
       ></ejs-schedule>
     </div>
   </div>
