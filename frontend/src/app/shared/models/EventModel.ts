@@ -1,6 +1,8 @@
 export interface EventModel {
-  introText: string;
-  date: string;
-  place: string;
-  url: string;
+  Id: number;
+  Subject: string;
+  StartTime: Date;
+  EndTime: Date;
+  description: string;
+  location: string;
 }

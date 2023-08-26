@@ -2,17 +2,7 @@
   <div class="content">
     <div id="image"></div>
     <div id="events">
-      <ejs-schedule
-        [eventSettings]="eventData"
-        [currentView]="newViewMode"
-        [dateFormat]="dateFormat"
-        [firstDayOfWeek]="weekFirstDay"
-        (cellDoubleClick)="onCellDoubleClick($event)"
-        locale="hu"
-        [readonly]="true"
-        height="300px"
-      >
-      </ejs-schedule>
+      <app-scheduler></app-scheduler>
     </div>
   </div>
 </div>

@@ -28,8 +28,9 @@ import {
   WorkWeekService,
   MonthService,
 } from '@syncfusion/ej2-angular-schedule';
+import { SchedulerComponent } from './scheduler/scheduler.component';
 @NgModule({
-  declarations: [HeaderComponent, FooterComponent],
+  declarations: [HeaderComponent, FooterComponent, SchedulerComponent],
   imports: [
     CommonModule,
     MatTabsModule,
@@ -55,6 +56,7 @@ import {
     CommonModule,
     HeaderComponent,
     FooterComponent,
+    SchedulerComponent,
     MatTabsModule,
     MatIconModule,
     RouterModule,
