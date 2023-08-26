@@ -7,10 +7,12 @@
         [currentView]="newViewMode"
         [dateFormat]="dateFormat"
         [firstDayOfWeek]="weekFirstDay"
-        (popupOpen)="onPopupOpen($event)"
         (cellDoubleClick)="onCellDoubleClick($event)"
         locale="hu"
-      ></ejs-schedule>
+        [readonly]="true"
+        height="300px"
+      >
+      </ejs-schedule>
     </div>
   </div>
 </div>
