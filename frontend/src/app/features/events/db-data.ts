@@ -1,4 +1,4 @@
-import { EventModel } from './models/EventModel';
+import { EventModel } from '../../shared/models/EventModel';
 
 export const events: EventModel[] = [
   {

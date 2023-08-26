@@ -2,7 +2,16 @@
   <div class="content">
     <div id="image"></div>
     <div id="events">
-      <app-scheduler></app-scheduler>
+      <ejs-schedule
+        [eventSettings]="eventData"
+        [currentView]="newViewMode"
+        [dateFormat]="dateFormat"
+        [firstDayOfWeek]="weekFirstDay"
+        locale="hu"
+        [readonly]="true"
+        (popupOpen)="onPopupOpen($event)"
+      >
+      </ejs-schedule>
     </div>
   </div>
 </div>

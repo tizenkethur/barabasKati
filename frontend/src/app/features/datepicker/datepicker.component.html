@@ -63,7 +63,6 @@
       </mat-card>
       <p>A kiválasztott dátum: {{ selectedDate | date }}</p>
 
-      <!-- TODO: send the form to the email -->
       <button
         type="submit"
         [disabled]="form.invalid || !selectedDate || !selectedEvent"

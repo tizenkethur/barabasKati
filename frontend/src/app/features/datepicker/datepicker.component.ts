@@ -48,6 +48,7 @@ export class DatepickerComponent {
   sendForm() {
     if (this.form.valid) {
       let userData = {
+        //send the date in a proper format
         ...this.form.getRawValue(),
         selectedDate: this.selectedDate,
         selectedEvent: this.selectedEvent,
