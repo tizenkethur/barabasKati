@@ -2,6 +2,6 @@ export interface UserData {
   name: string;
   email: string;
   phoneNumber: string;
-  selectedDate: Date;
+  selectedDate: string;
   selectedEvent: string;
 }

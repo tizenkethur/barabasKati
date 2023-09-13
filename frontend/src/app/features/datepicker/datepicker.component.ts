@@ -47,10 +47,13 @@ export class DatepickerComponent {
 
   sendForm() {
     if (this.form.valid) {
+      const finalDateFormat = this.selectedDate
+        .toString()
+        .split(' ')
+        .slice(1, 4);
       let userData = {
-        //send the date in a proper format
         ...this.form.getRawValue(),
-        selectedDate: this.selectedDate,
+        selectedDate: `${finalDateFormat[0]} ${finalDateFormat[1]}, ${finalDateFormat[2]}`,
         selectedEvent: this.selectedEvent,
       };
       this.emailService.sendForm(userData);
