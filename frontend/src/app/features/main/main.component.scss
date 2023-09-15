@@ -26,6 +26,10 @@
     align-items: center;
     text-align: justify;
 
+    span {
+      font-size: 32px;
+    }
+
     @include md {
       padding: 0;
     }
