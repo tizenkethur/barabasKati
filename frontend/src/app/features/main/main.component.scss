@@ -1,57 +1,74 @@
 @import "../../../mixins.scss";
 
-#introduction-holder {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.main-container .content {
+  #introduction-holder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-  #image {
-    width: calc(230px + 10vw);
-    height: calc(230px + 10vw);
-    background-image: url("../../../assets/rsz_retus.jpg");
-    background-size: cover;
-    background-position: center;
-    border-radius: 50%;
-    margin: 0 8px 20px 0;
+    .image-holder {
+      padding: 0;
+
+      img {
+        border-radius: 3px;
+        width: 350px;
+
+        @include custom(450px) {
+          width: 430px;
+        }
+      }
+    }
   }
-}
 
-#text-holder {
-  text-align: justify;
-  margin-top: 20px;
+  #text-holder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
 
-  @include md {
-    padding: 0;
+    @include md {
+      padding: 0;
+    }
+
+    h1 {
+      font-size: calc(34px + 0.7vw);
+      font-family: "Cormorant Garamond", serif;
+      line-height: 1;
+      font-weight: bold;
+
+      @include md {
+        margin: 0;
+      }
+    }
+
+    h3 {
+      font-family: "Great Vibes", cursive;
+      font-size: calc(30px + 0.7vw);
+    }
+
+    #name {
+      margin-top: 30px;
+    }
+
+    #access {
+      color: rgb(193, 177, 114);
+      margin-bottom: 10px;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 26px;
+    }
+
+    p {
+      font-family: "Cormorant Garamond", serif;
+    }
+
+    #image {
+      width: calc(230px + 10vw);
+      height: calc(230px + 10vw);
+      background-image: url("../../../assets/rsz_retus.jpg");
+      background-size: cover;
+      background-position: center;
+      border-radius: 50%;
+      margin: 0 8px 20px 0;
+    }
   }
-}
-
-h1 {
-  font-size: calc(34px + 0.7vw);
-  font-family: "Cormorant Garamond", serif;
-  line-height: 1;
-  font-weight: bold;
-
-  @include md {
-    margin: 0;
-  }
-}
-
-h3 {
-  font-family: "Great Vibes", cursive;
-  font-size: calc(30px + 0.7vw);
-}
-
-#name {
-  margin-top: 30px;
-}
-
-#access {
-  color: rgb(193, 177, 114);
-  margin: 0;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 26px;
-}
-
-p {
-  font-family: "Cormorant Garamond", serif;
 }

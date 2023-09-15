@@ -8,13 +8,6 @@ const routes: Routes = [
       import('../app/features/main/main.module').then((m) => m.MainModule),
   },
   {
-    path: 'kapcsolat',
-    loadChildren: () =>
-      import('../app/features/contacts/contacts.module').then(
-        (m) => m.ContactsModule
-      ),
-  },
-  {
     path: 'access-consciousness',
     loadChildren: () =>
       import('../app/features/access-consc/access-consc.module').then(

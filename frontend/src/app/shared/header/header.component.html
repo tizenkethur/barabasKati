@@ -25,7 +25,7 @@
         </p>
       </div>
     </mat-expansion-panel>
-    <mat-expansion-panel hideToggle disabled routerLink='/esemenyek'>
+    <mat-expansion-panel hideToggle disabled routerLink="/esemenyek">
       <mat-expansion-panel-header (click)="closePanel()">
         <p class="nested-title">Események</p>
       </mat-expansion-panel-header>
@@ -54,16 +54,6 @@
         (click)="closePanel()"
       >
         <mat-icon>home</mat-icon>
-      </button>
-      <button
-        class="nested-button"
-        mat-fab
-        color="primary"
-        aria-label="Button with a contacts icon"
-        routerLink="/kapcsolat"
-        (click)="closePanel()"
-      >
-        <mat-icon>import_contacts</mat-icon>
       </button>
     </div>
   </mat-expansion-panel>
