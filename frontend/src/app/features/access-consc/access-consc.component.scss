@@ -1,7 +1,14 @@
+@import "../../../mixins.scss";
+
 #access-consciousness,
 #access-bars,
 #access-facelift {
   text-align: justify;
+  width: calc(250px + 20vw);
+
+  @include md {
+    width: calc(480px + 20vw);
+  }
 }
 
 #access-consciousness {
@@ -12,13 +19,14 @@
 
     img {
       border-radius: 4px;
-      width: 350px;
+      width: calc(250px + 20vw);
     }
   }
 }
 
+#access-bars,
 #access-facelift {
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 .title {
@@ -41,21 +49,18 @@ ul {
 
 #bars-text-container {
   display: flex;
-  // justify-content: space-between;
   flex-direction: column;
 
   #container-holder {
     display: flex;
     flex-direction: column;
     width: 100%;
-    // margin-top: 20px;
 
     .container {
       border: 1px solid rgb(152, 133, 24, 0.6);
       background-color: rgb(253, 237, 237);
       border-radius: 10px;
-      margin-top: 20px;
-      // width: 380px;
+      margin-top: 30px;
       padding: 20px;
       height: 100%;
       box-shadow: 0 1px 16px 0 rgba(0, 0, 0, 0.2),

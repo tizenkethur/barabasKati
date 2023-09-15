@@ -48,6 +48,8 @@ body {
   font-family: "Cormorant Garamond", serif;
 
   .main-container {
+    display: flex;
+    justify-content: center;
     font-size: calc(15px + 0.7vw);
     font-weight: bold;
     margin-top: 20px;
@@ -65,7 +67,11 @@ body {
       line-height: 1.5;
       min-width: 310px;
       max-width: calc(630px + 20vw);
-      padding: 10px;
+      padding: 20px calc(12px + 6vw);
+
+      @include lg {
+        padding: 20px 12px;
+      }
     }
 
     @include md {

@@ -1,34 +1,57 @@
-img {
-  width: 350px;
-  margin-bottom: 20px;
-  box-shadow: 0 1px 16px 0 rgba(0, 0, 0, 0.2), 0 2px 8px 0 rgba(0, 0, 0, 0.14),
-    0 4px 8px -1px rgba(0, 0, 0, 0.12);
-}
+@import "../../../mixins.scss";
 
-#table-holder {
-  table {
-    width: 350px;
-    font-family: "Cormorant Garamond", cursive;
-    font-weight: bold;
+.main-container .content {
+  img {
+    width: calc(250px + 20vw);
+    box-shadow: 0 1px 16px 0 rgba(0, 0, 0, 0.2), 0 2px 8px 0 rgba(0, 0, 0, 0.14),
+      0 4px 8px -1px rgba(0, 0, 0, 0.12);
 
-    .mat-column-description,
-    .mat-column-timeInterval,
-    .mat-column-price {
-      color: rgb(121, 85, 72);
+    @include md {
+      width: 350px;
+    }
+  }
+
+  #table-holder {
+    margin-top: 30px;
+
+    table {
+      width: calc(250px + 20vw);
+      font-family: "Cormorant Garamond", cursive;
       font-weight: bold;
+      height: 350px;
+
+      .mat-column-description,
+      .mat-column-timeInterval,
+      .mat-column-price {
+        color: rgb(121, 85, 72);
+        font-weight: bold;
+      }
+
+      .mat-header-cell {
+        background-color: rgb(144, 221, 211);
+        letter-spacing: 1px;
+        text-align: center;
+        font-size: 24px;
+      }
+
+      .mat-cell {
+        width: 300px;
+        text-align: center;
+        font-size: 20px;
+      }
+
+      @include md {
+        width: 350px;
+      }
     }
 
-    .mat-header-cell {
-      background-color: rgb(144, 221, 211);
-      letter-spacing: 1px;
-      text-align: center;
-      font-size: 24px;
+    @include md {
+      margin-left: calc(10px + 4vw);
+      margin-top: -9px;
     }
+  }
 
-    .mat-cell {
-      width: 300px;
-      text-align: center;
-      font-size: 20px;
-    }
+  @include md {
+    flex-direction: row;
   }
 }

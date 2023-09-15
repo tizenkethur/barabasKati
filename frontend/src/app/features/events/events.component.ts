@@ -34,7 +34,7 @@ L10n.load({
   styleUrls: ['./events.component.scss'],
 })
 export class EventsComponent {
-  newViewMode: View = 'Agenda';
+  newViewMode: View = 'Month';
   dateFormat: string = 'yyyy.MM.dd';
   weekFirstDay: number = 1;
 
