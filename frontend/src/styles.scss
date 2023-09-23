@@ -72,6 +72,15 @@ body {
       @include lg {
         padding: 20px 12px;
       }
+
+      .text-box {
+        display: flex;
+        align-items: center;
+
+        span {
+          margin-top: -10px;
+        }
+      }
     }
 
     @include md {
