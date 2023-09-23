@@ -1,8 +1,0 @@
-node_modules/
-output/
-logs/
-.env
-dist
-coverage
-
-.vscode/
