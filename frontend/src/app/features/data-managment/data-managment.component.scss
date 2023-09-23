@@ -1,13 +1,23 @@
-.content {
-  #general-info {
-    text-align: justify;
-  }
+.main-container {
+  .content {
+    align-items: flex-start;
 
-  .iconWithData {
-    a {
-      text-decoration: none;
-      color: rgb(121, 85, 72);
-      margin-left: 10px;
+    .info-box {
+      text-align: justify;
+    }
+    #title-holder {
+      align-self: center;
+    }
+
+    .iconWithData {
+      text-align: center;
+      margin-bottom: 20px;
+
+      a {
+        text-decoration: none;
+        color: rgb(121, 85, 72);
+        margin-left: 10px;
+      }
     }
   }
 }
