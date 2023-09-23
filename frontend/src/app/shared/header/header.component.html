@@ -30,17 +30,14 @@
         <p class="nested-title">Események</p>
       </mat-expansion-panel-header>
     </mat-expansion-panel>
-    <mat-expansion-panel hideToggle disabled routerLink="/arak">
+    <mat-expansion-panel hideToggle disabled routerLink="/idopontfoglalas">
       <mat-expansion-panel-header (click)="closePanel()">
-        <p class="nested-title">Árak</p>
+        <p class="nested-title">Időpontfoglalás</p>
       </mat-expansion-panel-header>
     </mat-expansion-panel>
     <mat-expansion-panel disabled>
-      <mat-expansion-panel-header
-        routerLink="/idopontfoglalas"
-        (click)="closePanel()"
-      >
-        <p class="nested-title">Időpontfoglalás</p>
+      <mat-expansion-panel-header routerLink="/arak" (click)="closePanel()">
+        <p class="nested-title">Árak</p>
       </mat-expansion-panel-header>
     </mat-expansion-panel>
 
